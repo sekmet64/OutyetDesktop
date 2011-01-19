@@ -40,7 +40,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>.\sql\debug\</OutputPath>
     <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
-    <TargetConnectionString>Data Source=CSONGI-LAPTOP\SQLEXPRESS;Integrated Security=True;Pooling=False</TargetConnectionString>
+    <TargetConnectionString>Data Source=csongor-laptop;Integrated Security=True;Pooling=False</TargetConnectionString>
     <TargetDatabase>outyet</TargetDatabase>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <SuppressWarnings>

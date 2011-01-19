@@ -15,7 +15,7 @@ namespace DataAccessLayer
 
         public DAL()
         {
-            builder.DataSource = @"CSONGI-LAPTOP\SQLEXPRESS";
+            builder.DataSource = @"csongor-laptop";
             builder.IntegratedSecurity = true;
             builder.InitialCatalog = "outyet";
             conn = new SqlConnection(builder.ConnectionString);
