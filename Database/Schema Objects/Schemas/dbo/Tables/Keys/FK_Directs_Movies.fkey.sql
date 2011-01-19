@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Directs]
+    ADD CONSTRAINT [FK_Directs_Movies] FOREIGN KEY ([MovieID]) REFERENCES [dbo].[Movies] ([ID]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

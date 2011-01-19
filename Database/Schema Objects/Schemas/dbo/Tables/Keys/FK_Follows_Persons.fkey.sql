@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Follows]
+    ADD CONSTRAINT [FK_Follows_Persons] FOREIGN KEY ([PersonID]) REFERENCES [dbo].[Persons] ([ID]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
