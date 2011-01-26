@@ -91,6 +91,10 @@
     <Compile Include="NewListForm.Designer.cs">
       <DependentUpon>NewListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="outyetDataSet.cs">
+      <DependentUpon>outyetDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="outyetDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -325,9 +325,6 @@
     <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\CreateList.proc.sql">
       <SubType>Code</SubType>
     </Build>
-    <Build Include="GetMovieDetails.proc.sql">
-      <SubType>Code</SubType>
-    </Build>
     <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\GetActorsForMovie.proc.sql">
       <SubType>Code</SubType>
     </Build>
@@ -358,21 +355,30 @@
     <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\GetPersonID.proc.sql">
       <SubType>Code</SubType>
     </Build>
-    <Build Include="UpdateMovie.proc.sql">
-      <SubType>Code</SubType>
-    </Build>
     <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\FK_ListEntries_Movies.fkey.sql">
       <SubType>Code</SubType>
     </Build>
     <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\FK_ListEntries_Lists.fkey.sql">
       <SubType>Code</SubType>
     </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Triggers\DeleteListTrigger.ddltrigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Triggers\AddListTrigger.ddltrigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\UpdateMovie.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\GetMovieDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
   </ItemGroup>
   <ItemGroup>
-    <NotInBuild Include="Schema Comparisons\SchemaComparison.scmp">
+    <NotInBuild Include="Scripts\ImTestingHere.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
-    <NotInBuild Include="Scripts\ImTestingHere.sql">
+    <NotInBuild Include="Schema Comparisons\SchemaComparison.scmp">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
   </ItemGroup>

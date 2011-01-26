@@ -1,3 +1,5 @@
 ﻿ALTER DATABASE [$(DatabaseName)]
-    ADD FILE (NAME = [outyet], FILENAME = '$(DefaultDataPath)$(DatabaseName).mdf', FILEGROWTH = 1024 KB) TO FILEGROUP [PRIMARY];
+    ADD FILE (NAME = [outyet], FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\outyet.mdf', SIZE = 2048 KB, FILEGROWTH = 1024 KB) TO FILEGROUP [PRIMARY];
+
+
 

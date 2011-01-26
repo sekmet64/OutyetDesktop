@@ -212,8 +212,16 @@ namespace OutyetDesktopClient
 
             if (MessageBox.Show(message, caption, buttons) == System.Windows.Forms.DialogResult.Yes)
             {
-                b.DeleteList(username, activeList);
-                PopulateLists();
+                try
+                {
+                    b.DeleteList(username, activeList);
+                    PopulateLists();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("You cannot delete the followed artist list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
 

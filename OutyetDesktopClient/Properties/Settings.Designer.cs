@@ -50,11 +50,21 @@ namespace OutyetDesktopClient.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CSONGI-LAPTOP\\SQLEXPRESS;Initial Catalog=outyet;Integrated Security=T" +
-            "rue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=csongor-laptop/MSSQLSERVER;Initial Catalog=outyet;Integrated Security" +
+            "=True")]
         public string outyetConnectionString {
             get {
                 return ((string)(this["outyetConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CSONGOR-LAPTOP;Initial Catalog=outyet;Integrated Security=True")]
+        public string outyetConnectionString1 {
+            get {
+                return ((string)(this["outyetConnectionString1"]));
             }
         }
     }

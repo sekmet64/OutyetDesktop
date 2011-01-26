@@ -796,8 +796,7 @@ namespace OutyetDesktopClient.outyetDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=CSONGI-LAPTOP\\SQLEXPRESS;Initial Catalog=outyet;Integrated Security=T" +
-                "rue";
+            this._connection.ConnectionString = global::OutyetDesktopClient.Properties.Settings.Default.outyetConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

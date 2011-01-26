@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMovie));
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailsColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             this.getMoviesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.outyetDataSet = new OutyetDesktopClient.outyetDataSet();
@@ -41,10 +45,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.getMoviesTableAdapter = new OutyetDesktopClient.outyetDataSetTableAdapters.GetMoviesTableAdapter();
             this.statusLabel = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detailsColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getMoviesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -76,10 +76,48 @@
             this.dataGridView.Visible = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.yearDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // detailsColumn
+            // 
+            this.detailsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.detailsColumn.HeaderText = "";
+            this.detailsColumn.Name = "detailsColumn";
+            this.detailsColumn.ReadOnly = true;
+            this.detailsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.detailsColumn.Text = "more...";
+            this.detailsColumn.UseColumnTextForLinkValue = true;
+            this.detailsColumn.Width = 5;
+            // 
             // getMoviesBindingSource
             // 
             this.getMoviesBindingSource.DataMember = "GetMovies";
             this.getMoviesBindingSource.DataSource = this.bindingSource;
+            this.getMoviesBindingSource.CurrentChanged += new System.EventHandler(this.getMoviesBindingSource_CurrentChanged);
             // 
             // bindingSource
             // 
@@ -142,43 +180,6 @@
             this.statusLabel.TabIndex = 6;
             this.statusLabel.Text = "Please enter movie title in the search box.";
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.yearDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // detailsColumn
-            // 
-            this.detailsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.detailsColumn.HeaderText = "";
-            this.detailsColumn.Name = "detailsColumn";
-            this.detailsColumn.ReadOnly = true;
-            this.detailsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.detailsColumn.Text = "more...";
-            this.detailsColumn.UseColumnTextForLinkValue = true;
-            this.detailsColumn.Width = 5;
             // 
             // AddMovie
             // 

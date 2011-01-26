@@ -24,8 +24,15 @@ namespace OutyetDesktopClient
              MainForm p = (MainForm)Owner;
             if (b.CreateList(p.Username, listBox.Text))
             {
-                p.PopulateForm();
-                this.Close();
+                try
+                {
+                    p.PopulateForm();
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("You cannot delete the followed artists list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

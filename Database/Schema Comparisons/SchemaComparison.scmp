@@ -3,10 +3,10 @@
   <Version>1</Version>
   <SourceModelProvider>
     <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=CSONGI-LAPTOP\SQLEXPRESS;Initial Catalog=outyet;Integrated Security=True;Password=</ConnectionString>
+      <ConnectionString>Data Source=CSONGOR-LAPTOP;Initial Catalog=outyet;Integrated Security=True;Password=</ConnectionString>
       <DatabaseName>outyet</DatabaseName>
       <DspFamilyName>sql</DspFamilyName>
-      <Name>[CSONGI-LAPTOP\SQLEXPRESS.outyet]</Name>
+      <Name>[CSONGOR-LAPTOP.outyet]</Name>
     </ConnectionBasedModelProvider>
   </SourceModelProvider>
   <TargetModelProvider>
@@ -288,14 +288,6 @@
         <Value>True</Value>
       </PropertyElementName>
       <PropertyElementName>
-        <Name>TargetDatabaseName</Name>
-        <Value>outyet</Value>
-      </PropertyElementName>
-      <PropertyElementName>
-        <Name>TargetConnectionString</Name>
-        <Value>Data Source=CSONGI-LAPTOP\SQLEXPRESS;Initial Catalog=outyet;Integrated Security=True;Pooling=False</Value>
-      </PropertyElementName>
-      <PropertyElementName>
         <Name>VerifyDeployment</Name>
         <Value>True</Value>
       </PropertyElementName>
@@ -309,10 +301,6 @@
       </PropertyElementName>
       <PropertyElementName>
         <Name>Microsoft.Data.Schema.Sql.SchemaModel.ISqlPermissionStatement</Name>
-        <Value>ExcludedType</Value>
-      </PropertyElementName>
-      <PropertyElementName>
-        <Name>Microsoft.Data.Schema.Sql.SchemaModel.ISqlExtendedProperty</Name>
         <Value>ExcludedType</Value>
       </PropertyElementName>
     </ConfigurationOptionsElement>

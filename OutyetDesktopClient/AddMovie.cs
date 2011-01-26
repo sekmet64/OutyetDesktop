@@ -97,5 +97,10 @@ namespace OutyetDesktopClient
         {
             this.Close();
         }
+
+        private void getMoviesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

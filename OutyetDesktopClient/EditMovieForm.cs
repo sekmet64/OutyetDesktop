@@ -25,7 +25,6 @@ namespace OutyetDesktopClient
         private void EditMovieForm_Load(object sender, EventArgs e)
         {
             p = (MainForm)Owner;
-            moviesTable = b.GetMovies();
             for (Int32 i = 2020; i > 1900; i--)
             {
                 yearBox.Items.Add(i);
@@ -36,6 +35,7 @@ namespace OutyetDesktopClient
 
         private void PopulateMovies(String filter)
         {
+            moviesTable = b.GetMovies();
             moviesList.Items.Clear();
             foreach (DataRow row in moviesTable.Rows)
             {
